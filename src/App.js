@@ -1,34 +1,43 @@
-import "./styles.scss";
+import './styles.scss'
+import { connect } from 'react-redux'
 
-import { connect } from "react-redux";
-
-const App = ({ number, plus }) => {
+const App = ({ number, plus, minus }) => {
   return (
     <div className="App">
       <h1>Hello Redux</h1>
       <h2>{number}</h2>
-      <div
+      <button
         onClick={() => {
-          plus(10);
+          plus(10)
         }}
       >
         CountUp
-      </div>
+      </button>
+      <button
+        onClick={() => {
+          minus(10)
+        }}
+      >
+        CountDown
+      </button>
     </div>
-  );
-};
+  )
+}
 
 const mapStateProps = (state) => {
   return {
-    number: state
-  };
-};
+    number: state,
+  }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     plus: (num) => {
-      dispatch({ type: "PLUS", payload: { num: num } });
-    }
-  };
-};
+      dispatch({ type: 'PLUS', payload: { num: num } })
+    },
+    minus: (num) => {
+      dispatch({ type: 'MINUS', payload: { num: num } })
+    },
+  }
+}
 
-export default connect(mapStateProps, mapDispatchToProps)(App);
+export default connect(mapStateProps, mapDispatchToProps)(App)
