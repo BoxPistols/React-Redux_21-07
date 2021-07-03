@@ -1,9 +1,9 @@
 export const reducer = (state = 0, action) => {
     switch (action.type) {
-        case 'PLUS':
-            return state + action.payload.num
-        case 'MINUS':
-            return state - action.payload.num
+        case 'Plus':
+            return state + action.payload.item
+        case 'Minus':
+            return state - action.payload.item
         default:
             return state
     }
