@@ -31,11 +31,11 @@ const mapStateProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        plus: (num) => {
-            dispatch({ type: 'PLUS', payload: { num: num } })
+        plus: (numAction) => {
+            dispatch({ type: 'PLUS', payload: { num: numAction } })
         },
-        minus: (num) => {
-            dispatch({ type: 'MINUS', payload: { num: num } })
+        minus: (numAction) => {
+            dispatch({ type: 'MINUS', payload: { num: numAction } })
         },
     }
 }
