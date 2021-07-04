@@ -4,6 +4,8 @@ export const reducer = (state = 0, action) => {
             return state + action.payload.num
         case 'MINUS':
             return state - action.payload.num
+        case 'RESET':
+            return (state = action.payload.num)
         default:
             return state
     }
