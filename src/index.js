@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './styles.scss'
+
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import { reducer } from './reducer'
-import App from './App'
+import { reducer } from './reducer/counter'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './theme'
+import Redux_Counter from './redux/Redux_Counter'
 
 const store = createStore(
     reducer /* preloadedState, */,
@@ -25,7 +27,7 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
         <CssBaseline />
         <Provider store={store}>
-            <App />
+            <Redux_Counter />
         </Provider>
     </ThemeProvider>,
 
