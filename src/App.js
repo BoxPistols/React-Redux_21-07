@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
 const App = ({ number, plus, minus, reset }) => {
     const classes = useStyles()
     return (
-        <div className='App'>
-            <Container maxWidth='lg' className={classes.root}>
+        <Container maxWidth='lg' className={classes.root}>
+            <div className='App'>
                 <Typography variant='h1' component='h1'>
                     <FavoriteIcon color='secondary' />
-                    <h1>Hello Redux</h1>
+                    <p>Hello Redux</p>
                 </Typography>
 
                 <Typography variant='body1'>Redux Counter</Typography>
@@ -29,7 +29,7 @@ const App = ({ number, plus, minus, reset }) => {
 
                 <Box m={4}></Box>
 
-                <ButtonGroup color='primary' aria-label='outlined button group'>
+                <ButtonGroup>
                     <Button
                         variant='contained'
                         color='primary'
@@ -51,7 +51,7 @@ const App = ({ number, plus, minus, reset }) => {
                     </Button>
                     <Button
                         variant='contained'
-                        color='null'
+                        color='default'
                         onClick={() => {
                             reset(0)
                         }}
@@ -59,8 +59,8 @@ const App = ({ number, plus, minus, reset }) => {
                         Reset
                     </Button>
                 </ButtonGroup>
-            </Container>
-        </div>
+            </div>
+        </Container>
     )
 }
 
