@@ -1,10 +1,12 @@
-import View_Counter from '../view/View_Counter'
+import Counter from '../components/Counter'
 import { connect } from 'react-redux'
-import { plus, minus, reset } from '../action'
+import { plus, minus, reset } from '../actions'
 
 const mapStateProps = (state) => {
     return {
-        number: state,
+        number: state.counter,
+        day: state.day,
+        title: state.title,
     }
 }
 
@@ -23,4 +25,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateProps, mapDispatchToProps)(View_Counter)
+export default connect(mapStateProps, mapDispatchToProps)(Counter)

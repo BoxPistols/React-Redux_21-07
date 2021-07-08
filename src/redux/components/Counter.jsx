@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function View_Counter({ number, plus, minus, reset }) {
+export default function Counter({ number, plus, minus, reset, day, title }) {
     const classes = useStyles()
     return (
         <Container maxWidth='lg' className={classes.root}>
@@ -19,6 +19,10 @@ export default function View_Counter({ number, plus, minus, reset }) {
                     <FavoriteIcon color='secondary' />
                     <p>Hello Redux</p>
                 </Typography>
+
+                <p>
+                    {day} : {title}
+                </p>
 
                 <Typography variant='body1'>Redux Counter</Typography>
 
