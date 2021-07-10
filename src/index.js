@@ -10,6 +10,7 @@ const store = createStore(
     // for Extention Redux Debug
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
+// store.dispatch({ type: "MINUS", payload: { num: 10 } });
 
 store.subscribe(() => {
     console.log(store.getState())
