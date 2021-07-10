@@ -79,7 +79,6 @@ const mapDispatchToProps = (dispatch) => {
         },
         reset: (count) => {
             dispatch({ type: 'RESET', payload: { num: count } })
-        },
     }
 }
 
